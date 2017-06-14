@@ -32,7 +32,7 @@ def cls_main(p=True):
             if p:
                 print "  %x - %x [%d]:" % (succ_block.startEA, succ_block.endEA, succ_block.id)
                 
-        for pred_block in block.preds():
+        for pred_block in block.preds():# can not use this by IDA Pro v6.8, don't know why...
             if p:
                 print "  %x - %x [%d]:" % (pred_block.startEA, pred_block.endEA, pred_block.id)
 
